@@ -6,19 +6,12 @@
             <p class="listing-location">{{imovel?.cidade}}, {{imovel?.estado}}</p>
     </section>
     <section class="listing-features">
-        <h2 class="section-heading">Informações adicionais</h2>
+        <h2 class="section-heading">Informações para Alugar:</h2>
         <ul>
-                @for(info of imovel?.adicionais; track $index) {
+                @for(info of imovel?.aluguel; track $index) {
                     <li>{{info.chave}}: {{info.valor}}</li>
                 }
         </ul>
     </section>
-
-    <div>
-        <button type="button" class="primary" (click)="paginaAluguel()">Alugar</button>
-        <button type="button" class="primary">Comprar</button>
-        <button type="button" class="primary">Calcular financiamento</button>
-    </div>
-
     </article>
-</section>
+<section>

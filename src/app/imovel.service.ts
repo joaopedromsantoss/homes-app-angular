@@ -1,178 +1,244 @@
 import { Injectable } from '@angular/core';
 import { Imovel } from './imovel';
 
-
 @Injectable({
   providedIn: 'root'
 })
-
-
 export class ImovelService {
 
- private imoveisDB = [
-  {
-      "id": 1,
-      "url_foto": "1.jpg",
-      "nome": "Casa 01",
-      "cidade": "Saltinho",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais": [
-          {
-              "chave":"Quartos disponíveis",
-              "valor": 6
-          },
-          {
-              "chave":"Piscina",
-              "valor":"sim"
-          }
-      ]
-  },
+    private imoveisDB: Imovel[] = [
+        {
+            "id": 1,
+            "url_foto": "1.jpg",
+            "nome": "Sobrado lindo",
+            "cidade": "Paris",
+            "estado": "França",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "48.8566",
+            "longitude": "2.3522",
+            "adicionais": [
+                {
+                    "chave": "Quartos disponiveis",
+                    "valor": 4
+                },
+                {
+                    "chave": "Piscina",
+                    "valor": "sim"
+                }
+            ],
+            "aluguel":[
+                {
+                    "chave":"Aluguel Mensal",
+                    "valor": 4500.00
+                }
+                
+            ]
+        },
+        {
+            "id": 2,
+            "url_foto": "2.jpg",
+            "nome": "Kitnet Economico",
+            "cidade": "Nova Iorque",
+            "estado": "Estados Unidos",
+            "tipoImovel": "Apartamento",
+            "favorito": false,
+            "latitude": "40.7128",
+            "longitude": "-74.0060",
+            "adicionais": [
+                {
+                    "chave": "Banheiro",
+                    "valor": 1
+                }
+            ],
+            "aluguel":[
+                {
+                    "chave":"Aluguel Anual",
+                    "valor": 50.000
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "url_foto": "3.jpg",
+            "nome": "Casarão na floresta",
+            "cidade": "Rio de Janeiro",
+            "estado": "Brasil",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "-22.9068",
+            "longitude": "-43.1729",
+            "adicionais": [
+                {
+                    "chave": "Quartos disponiveis",
+                    "valor": 10
+                },
+                {
+                    "chave": "Quintal",
+                    "valor": "sim"
+                },
+                {
+                    "chave": "Arvores",
+                    "valor": "Bastante"
+                }
+            ],
+            "aluguel":[
+               {
+                "chave":"Aluguel Mensal",
+                "valor": 1500.00
+               }
+            ]
+        },
+        {
+            "id": 4,
+            "url_foto": "4.jpg",
+            "nome": "Casa na Praia",
+            "cidade": "Los Angeles",
+            "estado": "Estados Unidos",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "34.0522",
+            "longitude": "-118.2437",
+            "adicionais": [
+                {
+                    "chave": "Piscina",
+                    "valor": "não"
+                },
+                {
+                    "chave": "Jardim",
+                    "valor": "sim"
+                }
+            ],
+            "aluguel":[]
 
-  {
-      "id": 2,
-      "url_foto": "2.jpg",
-      "nome": "Kitnet econômico",
-      "cidade": "Charqueada",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"apartamento",
-      "adicionais": [
-          {
-              "chave":"Banheiro",
-              "valor": 1
-          }  
-      ]
-
-  },
-
-  {
-      "id": 3,
-      "url_foto": "3.jpg",
-      "nome": "Casarão na floresta",
-      "cidade": "Americana",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais": [
-          {
-              "chave":"Quartos disponíveis",
-              "valor": 10
-          },
-          {
-              "chave":"Piscina",
-              "valor":"sim"
-          },
-          {
-              "chave":"Quintal",
-              "valor":"Muito grande"
-          },
-          {
-              "chave":"Árvores",
-              "valor":"Frutiferas"
-          }
-
-      ]
-  },
-
-  {
-      "id": 4,
-      "url_foto": "4.jpg",
-      "nome": "Casa 04.1",
-      "cidade": "São Pedro",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-
-  {
-      "id": 5,
-      "url_foto": "5.jpg",
-      "nome": "Casa 05",
-      "cidade": "Nova Odessa",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-
-
-  {
-      "id": 6,
-      "url_foto": "6.jpg",
-      "nome": "Casa 06",
-      "cidade": "Piracicaba",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-
-  {
-      "id": 7,
-      "url_foto": "7.jpg",
-      "nome": "Casa 07",
-      "cidade": "Saltinho",
-      "estado": "Rio de Janeiro",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-
-  {
-      "id": 8,
-      "url_foto": "8.jpg",
-      "nome": "Casa 08",
-      "cidade": "Sumaré",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-  {
-      "id": 9,
-      "url_foto": "9.jpg",
-      "nome": "Casa 09",
-      "cidade": "Saltinho",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"apartamento",
-      "adicionais":[]
-  },
-
-  {
-      "id": 10,
-      "url_foto": "10.jpg",
-      "nome": "Casa 10",
-      "cidade": "Saltinho",
-      "estado": "São Paulo",
-      "favorito": false,
-      "tipo":"casa",
-      "adicionais":[]
-  },
-
-] 
+        },
+        {
+            "id": 5,
+            "url_foto": "5.jpg",
+            "nome": "Casa Jardim",
+            "cidade": "Londres",
+            "estado": "Reino Unido",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "51.5074",
+            "longitude": "-0.1278",
+            "adicionais": [
+                {
+                    "chave": "Garagem",
+                    "valor": "2 vagas"
+                }
+            ],
+            "aluguel":[]
+        },
+        {
+            "id": 6,
+            "url_foto": "6.jpg",
+            "nome": "Casa dos Sonhos",
+            "cidade": "Sydney",
+            "estado": "Austrália",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "-33.8688",
+            "longitude": "151.2093",
+            "adicionais": [
+                {
+                    "chave": "Quintal",
+                    "valor": "grande"
+                }
+            ],
+            "aluguel": []
+        },
+        {
+            "id": 7,
+            "url_foto": "7.jpg",
+            "nome": "Casa Aconchegante",
+            "cidade": "Tóquio",
+            "estado": "Japão",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "35.6895",
+            "longitude": "139.6917",
+            "adicionais": [
+                {
+                    "chave": "Área de lazer",
+                    "valor": "piscina e churrasqueira"
+                }
+            ],
+            "aluguel":[]
+        },
+        {
+            "id": 8,
+            "url_foto": "8.jpg",
+            "nome": "Apartamento Moderno",
+            "cidade": "Dubai",
+            "estado": "Emirados Árabes Unidos",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "25.2769",
+            "longitude": "55.2963",
+            "adicionais": [
+                {
+                    "chave": "Segurança",
+                    "valor": "portaria 24h"
+                }
+            ],
+            "aluguel":[]
+        },
+        {
+            "id": 9,
+            "url_foto": "9.jpg",
+            "nome": "Apartamento Confortável",
+            "cidade": "Hong Kong",
+            "estado": "China",
+            "tipoImovel": "Apartamento",
+            "favorito": false,
+            "latitude": "22.3193",
+            "longitude": "114.1694",
+            "adicionais": [
+                {
+                    "chave": "Academia",
+                    "valor": "sim"
+                }
+            ],
+            "aluguel":[]
+        },
+        {
+            "id": 10,
+            "url_foto": "10.jpg",
+            "nome": "Casa Charmosa",
+            "cidade": "Cidade do Cabo",
+            "estado": "África do Sul",
+            "tipoImovel": "Casa",
+            "favorito": false,
+            "latitude": "-33.9249",
+            "longitude": "18.4241",
+            "adicionais": [
+                {
+                    "chave": "Vista panorâmica",
+                    "valor": "serra"
+                }
+            ],
+            "aluguel":[]
+        }
+    ];
+    
 
 
-
- buscarTodosImoveis(): Imovel[]{
-  return this.imoveisDB
+buscarTodosImoveis() {
+    return this.imoveisDB
 }
 
- buscaImovelPeloId(id:number) : Imovel|undefined{
-  let imovel;
+buscarImovelPeloId(id: number) : Imovel | undefined {
+    let imovel;
+    
+    for (let i=0; i < this.imoveisDB.length; i++) {
+        imovel = this.imoveisDB[i];
 
-  for(let i=0;i< this.imoveisDB.length;i++){
-      imovel = this.imoveisDB[i];
-      if(imovel.id == id){
-          break
-      }
-  }
-  return imovel
+        if (imovel.id == id) { 
+            break
+        }
+    }
+    return imovel
 }
-
+    
 }
-
-
