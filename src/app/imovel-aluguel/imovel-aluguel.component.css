@@ -83,3 +83,11 @@ article {
       height: 400px;
     }
   }
+
+.voltar{
+  width: 3%;
+  position: absolute;
+  top: 4%;
+  left: 11%;
+}
+
