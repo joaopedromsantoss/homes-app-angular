@@ -13,9 +13,6 @@ section {
     cursor: pointer;
   }
 
-  .alinha {
-    margin-left: 5px;
-  }
   
   .results {
     display: grid;
