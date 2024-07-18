@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +24,3 @@ button.primary {
     color: white;
     border-radius: 8px;
 }
-
-
-.alinha {
-    margin-left: 5px;
-  }

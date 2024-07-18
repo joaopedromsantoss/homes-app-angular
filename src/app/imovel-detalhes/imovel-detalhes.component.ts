@@ -11,14 +11,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './imovel-detalhes.component.css'
 })
 export class ImovelDetalhesComponent {
-
-  imovel: Imovel | undefined
-
-  constructor(
-    private imvService: ImovelService,
-    private route: ActivatedRoute
-  ) {
-    const id = this.route.snapshot.params["id"]
-    this.imovel = this.imvService.buscarImovelPeloId(id)
-  }
+imovel:Imovel | undefined   // nas verções mais novas colocar o undefined (programação de forma segura)
+constructor(
+  private imvService: ImovelService,
+  private route: ActivatedRoute
+){
+  const id=this.route.snapshot.params["id"]
+  this.imovel = this.imvService.buscaImovelPeloId(id)
+}
 }

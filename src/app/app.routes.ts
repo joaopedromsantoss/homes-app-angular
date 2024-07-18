@@ -6,7 +6,7 @@ export const routes: Routes = [
 
     {
         path: "detalhes/:id",
-        component: ImovelDetalhesComponent
+        component:ImovelDetalhesComponent
     },
     {
         path: "",
