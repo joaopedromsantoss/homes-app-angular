@@ -27,4 +27,14 @@ export class ImovelDetalhesComponent {
     const url = `/detalhes/${this.imovel?.id}/aluguel`
     this.rt.navigate([url])
   }
+
+  voltarDetalhes(){
+    const url = `/detalhes/${this.imovel?.id}/`
+    this.rt.navigate([url])
+  }
+
+  paginaFinanciamento(){
+    const url = `/detalhes/${this.imovel?.id}/financiamento`
+    this.rt.navigate([url])
+  }
 }

@@ -17,6 +17,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "48.8566",
             "longitude": "2.3522",
+            "valor": 450000.00,
             "adicionais": [
                 {
                     "chave": "Quartos disponiveis",
@@ -45,6 +46,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "40.7128",
             "longitude": "-74.0060",
+            "valor": 100000.00,
             "adicionais": [
                 {
                     "chave": "Banheiro",
@@ -68,6 +70,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-22.9068",
             "longitude": "-43.1729",
+            "valor": 450000.00,
             "adicionais": [
                 {
                     "chave": "Quartos disponiveis",
@@ -99,6 +102,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "34.0522",
             "longitude": "-118.2437",
+            "valor": 450000.00,
             "adicionais": [
                 {
                     "chave": "Piscina",
@@ -122,6 +126,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "51.5074",
             "longitude": "-0.1278",
+            "valor": 450000.00,
             "adicionais": [
                 {
                     "chave": "Garagem",
@@ -140,6 +145,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-33.8688",
             "longitude": "151.2093",
+            "valor": 4350000.00,
             "adicionais": [
                 {
                     "chave": "Quintal",
@@ -158,6 +164,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "35.6895",
             "longitude": "139.6917",
+            "valor": 683000.00,
             "adicionais": [
                 {
                     "chave": "Área de lazer",
@@ -176,6 +183,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "25.2769",
             "longitude": "55.2963",
+            "valor": 250000.00,
             "adicionais": [
                 {
                     "chave": "Segurança",
@@ -194,6 +202,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "22.3193",
             "longitude": "114.1694",
+            "valor": 1450000.00,
             "adicionais": [
                 {
                     "chave": "Academia",
@@ -212,6 +221,7 @@ export class ImovelService {
             "favorito": false,
             "latitude": "-33.9249",
             "longitude": "18.4241",
+            "valor": 850000.00,
             "adicionais": [
                 {
                     "chave": "Vista panorâmica",

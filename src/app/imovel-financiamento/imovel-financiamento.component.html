@@ -1,0 +1,34 @@
+<img src="seta.png" alt="voltar" class="voltar cursor" (click)="voltarDetalhes()" >
+
+<section class="content">
+    <article>
+        <img alt="Foto" class="listing-photo" src="{{imovel?.url_foto}}">
+        <section class="listing-description">
+            <h2 class="listing-heading">{{imovel?.nome}}</h2>
+            <p class="listing-location">{{imovel?.cidade}}, {{imovel?.estado}}</p>
+            <p class="valor">Valor do imovel: R$ {{imovel?.valor}}</p>
+    </section>
+    <section class="listing-features">
+        <h2 class="section-heading">Informações Financiamento:</h2>
+    </section>
+
+    <div>
+        <label for="">Valor Entrada: </label>
+        <input type="number" [(ngModel)]="valorEntrada"/>
+        <br><br>
+
+        <label for="" >Prazo Meses: </label>
+        <select [(ngModel)]="prazoMeses" class="custom-select">
+            <option value="100">100</option>
+            <option value="180">180</option>
+            <option value="360">360</option>
+        </select>
+
+        <br><br>
+        <button class="primary" (click)="calcular()">Calcular</button>
+        <br><br>
+
+        <h3>Valor parcela: {{formatCurrency(valorParcela)}}</h3>
+    </div>
+    </article>
+<section>

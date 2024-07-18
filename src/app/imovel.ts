@@ -18,6 +18,7 @@ export interface Imovel {
     favorito: boolean
     latitude: String
     longitude: String
+    valor: number
     adicionais: Propriedades[]
     aluguel: DetalhesAluguel[]
 }
